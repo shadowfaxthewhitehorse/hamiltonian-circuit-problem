@@ -42,6 +42,23 @@ def is_valid(graph: List[List[int]], path: List[int], pos: int, v: int) -> bool:
 
     return True
 
+# DEVNOTES
+#
+# In this program, we first define the hamiltonian_circuit function that takes a graph represented as an adjacency matrix and returns a 
+# Hamiltonian circuit if one exists. The function initializes a list path with all elements set to -1, and sets the first element to 0. 
+# We then call the hamiltonian_circuit_helper function with the graph, the path list, and the position of the second vertex (i.e., 1).
+#
+# The hamiltonian_circuit_helper function is a recursive function that tries to extend the path list by considering all possible vertices that can 
+# be visited next. If a valid vertex is found, the function updates the path list and calls itself recursively with the updated path. If a Hamiltonian 
+# circuit is found, the function returns True, otherwise it backtracks by resetting the vertex at the current position in the path list and tries the 
+# next vertex.
+#
+# The is_valid function is a helper function that checks whether a given vertex can be added to the path list at the current position. The function 
+# checks if the vertex is adjacent to the last vertex in the path, and whether the vertex has already been visited.
+#
+# In the example above, the program is tested with a sample graph represented as an adjacency matrix. The output is either the Hamiltonian circuit 
+# found or a message indicating that no Hamiltonian circuit was found.
+#
 # Test the program with a sample graph
 graph = [[0, 1, 1, 1, 0],
          [1, 0, 1, 0, 1],
