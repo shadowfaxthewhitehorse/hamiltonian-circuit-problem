@@ -75,7 +75,7 @@ func isValid(graph [][]int, path []int, pos int, v int) bool {
 // The isValid function is a helper function that checks whether a given vertex can be added to the path slice at the current position. The function checks 
 // if the vertex is adjacent to the last vertex in the path, and whether the vertex has already been visited.
 //
-// In the example above, the program is tested with a sample graph represented as an adjacency matrix. 
+// In the code below, the program is tested with a sample graph represented as an adjacency matrix. 
 //
 func main() {
     // Test the program with a sample graph
